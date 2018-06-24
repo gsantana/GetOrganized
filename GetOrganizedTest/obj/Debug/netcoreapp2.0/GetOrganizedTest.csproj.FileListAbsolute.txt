@@ -1,0 +1,17 @@
+C:\Users\Gustavo\source\repos\GetOrganized\GetOrganizedTest\obj\Debug\netcoreapp2.0\GetOrganizedTest.csprojAssemblyReference.cache
+C:\Users\Gustavo\source\repos\GetOrganized\GetOrganizedTest\obj\Debug\netcoreapp2.0\GetOrganizedTest.csproj.CoreCompileInputs.cache
+C:\Users\Gustavo\source\repos\GetOrganized\GetOrganizedTest\obj\Debug\netcoreapp2.0\GetOrganizedTest.AssemblyInfoInputs.cache
+C:\Users\Gustavo\source\repos\GetOrganized\GetOrganizedTest\obj\Debug\netcoreapp2.0\GetOrganizedTest.AssemblyInfo.cs
+C:\Users\Gustavo\source\repos\GetOrganized\GetOrganizedTest\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\Gustavo\source\repos\GetOrganized\GetOrganizedTest\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\Gustavo\source\repos\GetOrganized\GetOrganizedTest\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+C:\Users\Gustavo\source\repos\GetOrganized\GetOrganizedTest\bin\Debug\netcoreapp2.0\GetOrganizedTest.deps.json
+C:\Users\Gustavo\source\repos\GetOrganized\GetOrganizedTest\bin\Debug\netcoreapp2.0\GetOrganizedTest.runtimeconfig.json
+C:\Users\Gustavo\source\repos\GetOrganized\GetOrganizedTest\bin\Debug\netcoreapp2.0\GetOrganizedTest.runtimeconfig.dev.json
+C:\Users\Gustavo\source\repos\GetOrganized\GetOrganizedTest\bin\Debug\netcoreapp2.0\GetOrganizedTest.dll
+C:\Users\Gustavo\source\repos\GetOrganized\GetOrganizedTest\bin\Debug\netcoreapp2.0\GetOrganizedTest.pdb
+C:\Users\Gustavo\source\repos\GetOrganized\GetOrganizedTest\bin\Debug\netcoreapp2.0\GetOrganized.dll
+C:\Users\Gustavo\source\repos\GetOrganized\GetOrganizedTest\bin\Debug\netcoreapp2.0\GetOrganized.pdb
+C:\Users\Gustavo\source\repos\GetOrganized\GetOrganizedTest\obj\Debug\netcoreapp2.0\GetOrganizedTest.csproj.CopyComplete
+C:\Users\Gustavo\source\repos\GetOrganized\GetOrganizedTest\obj\Debug\netcoreapp2.0\GetOrganizedTest.dll
+C:\Users\Gustavo\source\repos\GetOrganized\GetOrganizedTest\obj\Debug\netcoreapp2.0\GetOrganizedTest.pdb
