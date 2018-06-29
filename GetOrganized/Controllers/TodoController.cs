@@ -1,18 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using GetOrganized.Models;
+﻿using GetOrganized.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Http;
 
 namespace GetOrganized.Controllers
 {
+    [Authorize]
     public class TodoController : Controller
     {
         // GET: Todo
         public ActionResult Index()
         {
+            ViewData["UserName"] = User.Identity.Name;
             return View(Todo.ThingsToBoDone);
         }
 
@@ -35,8 +35,17 @@ namespace GetOrganized.Controllers
         {
             try
             {
-                Todo.ThingsToBoDone.Add(todo);
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    Todo.ThingsToBoDone.Add(todo);
+                    if (this.HttpContext.Session.Get<SessionSummary>("SessionSumary") == null)
+                        HttpContext.Session.Set<SessionSummary>("SessionSumary", new SessionSummary());
+
+                    var summary = HttpContext.Session.Get<SessionSummary>("SessionSumary");
+                    summary.todos.Add(todo);
+                    return RedirectToAction(nameof(Index));
+                }
+                    return View();
             }
             catch
             {
@@ -47,7 +56,7 @@ namespace GetOrganized.Controllers
         // GET: Todo/Edit/5
         public ActionResult Edit(string title)
         {
-            return View(Todo.ThingsToBoDone.Find(x=> x.Title == title));
+            return View(Todo.ThingsToBoDone.Find(x => x.Title == title));
         }
 
         // POST: Todo/Edit/5
@@ -90,6 +99,28 @@ namespace GetOrganized.Controllers
             {
                 return View();
             }
+        }
+
+        [HttpPost]
+        public ActionResult Convert(Thought thought, string outcome)
+        {
+            var todo = new Todo()
+            {
+
+                Completed = false,
+                Outcome = outcome,
+                Title = thought.Name,
+                Topic = Topic.topics.Find(x => x.Id == thought.Topic.Id)
+            };
+
+            Todo.ThingsToBoDone.Add(todo);
+            if (this.HttpContext.Session.Get<SessionSummary>("SessionSumary") == null)
+                HttpContext.Session.Set<SessionSummary>("SessionSumary", new SessionSummary());
+
+            var summary = HttpContext.Session.Get<SessionSummary>("SessionSumary");
+            summary.todos.Add(todo);
+            Thought.Thoughts.RemoveAll(x => x.Name == thought.Name);
+            return RedirectToAction("Process", "Thought");
         }
     }
 }

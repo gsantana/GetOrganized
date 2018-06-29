@@ -1,0 +1,30 @@
+﻿@model GetOrganized.Models.Thought
+
+@{
+    ViewData["Title"] = "Process";
+}
+
+<h2>Process Thoughts</h2>
+<fieldset>
+    <legend>Thought</legend>
+    <p>
+        <b>@Html.Encode(Model.Name) </b>
+    </p>
+    <p>
+        Topic:
+        @Html.Encode(Model.Topic.Name)
+    </p>
+</fieldset>
+@using (Html.BeginForm("Convert", "Todo")) {
+<fieldset>
+    <legend>Actionable</legend>
+    <p>
+        @Html.Hidden("Name", Model.Name)
+        @Html.Hidden("Topic.Id", Model.Topic.Id)
+        Well Defined Outcome:@Html.TextBox("Outcome")
+    </p>
+    <p>
+        <input type="submit" value="Create Action" />
+    </p>
+</fieldset>
+}

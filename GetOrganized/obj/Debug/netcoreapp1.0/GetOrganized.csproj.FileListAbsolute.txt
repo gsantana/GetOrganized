@@ -1,0 +1,4 @@
+C:\Users\Gustavo\source\repos\GetOrganized\GetOrganized\obj\Debug\netcoreapp1.0\GetOrganized.csprojAssemblyReference.cache
+C:\Users\Gustavo\source\repos\GetOrganized\GetOrganized\obj\Debug\netcoreapp1.0\GetOrganized.csproj.CoreCompileInputs.cache
+C:\Users\Gustavo\source\repos\GetOrganized\GetOrganized\obj\Debug\netcoreapp1.0\GetOrganized.AssemblyInfoInputs.cache
+C:\Users\Gustavo\source\repos\GetOrganized\GetOrganized\obj\Debug\netcoreapp1.0\GetOrganized.AssemblyInfo.cs

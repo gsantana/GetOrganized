@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+<table>
+    @{var modelList = (IEnumerable<Object>)Model;}
+    @foreach (var item in modelList)
+    {
+        <tr>
+            <td>
+                @ViewData["item"] = item; 
+                @Html.DisplayForModel(item) 
+            </td>
+        </tr>
+    }
+</table>

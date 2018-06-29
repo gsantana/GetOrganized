@@ -3,10 +3,10 @@ C:\Users\Gustavo\source\repos\GetOrganized\GetOrganized\bin\Debug\netcoreapp2.0\
 C:\Users\Gustavo\source\repos\GetOrganized\GetOrganized\bin\Debug\netcoreapp2.0\GetOrganized.runtimeconfig.dev.json
 C:\Users\Gustavo\source\repos\GetOrganized\GetOrganized\bin\Debug\netcoreapp2.0\GetOrganized.dll
 C:\Users\Gustavo\source\repos\GetOrganized\GetOrganized\bin\Debug\netcoreapp2.0\GetOrganized.pdb
-C:\Users\Gustavo\source\repos\GetOrganized\GetOrganized\obj\Debug\netcoreapp2.0\GetOrganized.csprojAssemblyReference.cache
 C:\Users\Gustavo\source\repos\GetOrganized\GetOrganized\obj\Debug\netcoreapp2.0\GetOrganized.csproj.CoreCompileInputs.cache
-C:\Users\Gustavo\source\repos\GetOrganized\GetOrganized\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
 C:\Users\Gustavo\source\repos\GetOrganized\GetOrganized\obj\Debug\netcoreapp2.0\GetOrganized.AssemblyInfoInputs.cache
 C:\Users\Gustavo\source\repos\GetOrganized\GetOrganized\obj\Debug\netcoreapp2.0\GetOrganized.AssemblyInfo.cs
 C:\Users\Gustavo\source\repos\GetOrganized\GetOrganized\obj\Debug\netcoreapp2.0\GetOrganized.dll
 C:\Users\Gustavo\source\repos\GetOrganized\GetOrganized\obj\Debug\netcoreapp2.0\GetOrganized.pdb
+C:\Users\Gustavo\source\repos\GetOrganized\GetOrganized\obj\Debug\netcoreapp2.0\GetOrganized.csprojAssemblyReference.cache
+C:\Users\Gustavo\source\repos\GetOrganized\GetOrganized\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs

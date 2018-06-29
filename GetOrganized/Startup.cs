@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using GetOrganized.Data;
 using GetOrganized.Models;
 using GetOrganized.Services;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
 
 namespace GetOrganized
 {
@@ -37,6 +38,10 @@ namespace GetOrganized
             services.AddTransient<IEmailSender, EmailSender>();
 
             services.AddMvc();
+            services.AddSingleton<ITempDataProvider, CookieTempDataProvider>();
+            services.AddSession();
+            services.AddMemoryCache();
+            services.AddDistributedMemoryCache();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,6 +62,7 @@ namespace GetOrganized
 
             app.UseAuthentication();
 
+            app.UseSession();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
