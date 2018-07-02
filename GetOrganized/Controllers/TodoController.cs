@@ -1,4 +1,7 @@
 ﻿using GetOrganized.Models;
+using GetOrganized.Models.Domain;
+using GetOrganized.Persistence;
+using GetOrganized.Persistence.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -6,14 +9,28 @@ using System.Net.Http;
 
 namespace GetOrganized.Controllers
 {
-    [Authorize]
     public class TodoController : Controller
     {
+        public TodoRepository todoRepo;
+        public TodoController(TodoRepository todoRepository)
+        {
+            todoRepo = todoRepository;
+        }
+
+        //public TodoController()
+        //{
+        //}
+
+        //public TodoController(NHibernate.ISession todoRepository)
+        //{
+        //    var a = todoRepository;
+        //}
+
         // GET: Todo
         public ActionResult Index()
         {
             ViewData["UserName"] = User.Identity.Name;
-            return View(Todo.ThingsToBoDone);
+            return View(todoRepo.GetAll());
         }
 
         // GET: Todo/Details/5
@@ -31,26 +48,33 @@ namespace GetOrganized.Controllers
         // POST: Todo/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ServiceFilter(typeof(TransactionAttribute))]
         public ActionResult Create(Todo todo)
         {
-            try
-            {
-                if (ModelState.IsValid)
-                {
-                    Todo.ThingsToBoDone.Add(todo);
-                    if (this.HttpContext.Session.Get<SessionSummary>("SessionSumary") == null)
-                        HttpContext.Session.Set<SessionSummary>("SessionSumary", new SessionSummary());
+            //try
+            //{
+            //if (ModelState.IsValid)
+            //{
+            Todo.ThingsToBoDone.Add(todo);
+            if (this.HttpContext.Session.Get<SessionSummary>("SessionSumary") == null)
+                HttpContext.Session.Set<SessionSummary>("SessionSumary", new SessionSummary());
 
-                    var summary = HttpContext.Session.Get<SessionSummary>("SessionSumary");
-                    summary.todos.Add(todo);
-                    return RedirectToAction(nameof(Index));
-                }
-                    return View();
-            }
-            catch
-            {
-                return View();
-            }
+            var a = todo.Title;
+
+            var summary = HttpContext.Session.Get<SessionSummary>("SessionSumary");
+            summary.todos.Add(todo);
+            //var todoProxy = ModelProxy<Todo>.Create(todo);
+            //var b = todoProxy.Title;
+            //todoProxy.Title = "sfadfafd";
+            todoRepo.SaveOrUpdate(todo);
+            return RedirectToAction(nameof(Index));
+            //}
+            return View();
+            //}
+            //catch
+            //{
+            //    return View();
+            //}
         }
 
         // GET: Todo/Edit/5

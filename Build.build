@@ -1,0 +1,9 @@
+<Project DefaultTargets="All" >
+  <Target Name="All" DependsOnTargets="Compile" /> 
+  
+  <Target Name="Compile" >
+  <MSBuild Projects="GetOrganized.sln" Targets="Build" />
+  </Target>
+
+
+</Project>

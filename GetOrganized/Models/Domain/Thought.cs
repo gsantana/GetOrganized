@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace GetOrganized.Models
+namespace GetOrganized.Models.Domain
 {
     public class Thought
     {
@@ -12,8 +12,8 @@ namespace GetOrganized.Models
             new Thought{ Id = 1, Topic = Topic.topics[1], Name = "Thought 2" }
         };
 
-        public int Id { get; set; }
-        public Topic Topic { get; set; }
-        public string Name { get; set; }
+        public virtual int Id { get; set; }
+        public virtual Topic Topic { get; set; }
+        public virtual string Name { get; set; }
     }
 }

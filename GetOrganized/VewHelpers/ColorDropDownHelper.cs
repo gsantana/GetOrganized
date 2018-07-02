@@ -1,4 +1,5 @@
 ﻿using GetOrganized.Models;
+using GetOrganized.Models.Domain;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
@@ -26,7 +27,7 @@ namespace GetOrganized.VewHelpers
             {
                 var optionTag = new TagBuilder("option");
                 optionTag.MergeAttribute("value", option.Id.ToString()); //(4)
-                optionTag.MergeAttribute("style", "color: white; background-color: " + option.Color.ToString());
+                //optionTag.MergeAttribute("style", "color: white; background-color: " + option.Color.ToString());
                 optionTag.InnerHtml.AppendHtml(option.Name);
                 var stringWriterOp = new System.IO.StringWriter();
                 optionTag.WriteTo(stringWriterOp, HtmlEncoder.Default);

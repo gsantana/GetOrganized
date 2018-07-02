@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using MyTested.AspNetCore.Mvc;
 
 using Microsoft.Extensions.DependencyInjection;
 using GetOrganized;

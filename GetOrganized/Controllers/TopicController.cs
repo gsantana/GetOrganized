@@ -1,4 +1,5 @@
 ﻿using GetOrganized.Models;
+using GetOrganized.Models.Domain;
 using Handy.DotNETCoreCompatibility.ColourTranslations;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

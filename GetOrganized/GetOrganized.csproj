@@ -3,10 +3,13 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <UserSecretsId>aspnet-GetOrganized-40F8E1D2-FF57-43BC-870E-5F758CB68EBF</UserSecretsId>
+    <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
 
 
   <ItemGroup>
+    <PackageReference Include="AutoProperties.Fody" Version="1.13.0" />
+    <PackageReference Include="FluentNHibernate" Version="2.1.2" />
     <PackageReference Include="Handy.DotNETCore-Compatibility.ColorTranslations" Version="0.2.1" />
     <PackageReference Include="Handy.DotNETCore-Compatibility.StandardLibrary" Version="0.2.1" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.8" />
@@ -14,6 +17,9 @@
     <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.1.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.3" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.4" PrivateAssets="All" />
+    <PackageReference Include="NHibernate" Version="5.1.3" />
+    <PackageReference Include="NHibernate.Validator" Version="5.1.0" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.108" />
   </ItemGroup>
 
   <ItemGroup>
